@@ -1,0 +1,29 @@
+GET http://localhost:8080/ HTTP/1.1
+
+###
+GET http://localhost:8080/generate?username=user1 HTTP/1.1
+Content-Type: application/json
+
+
+###
+POST http://localhost:8080/send HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwiZXhwIjoxNzM3Nzc0NTg1fQ.SqGfT2h4ZQmEK4EnJaSb56BnpRyLq2ladkzKeZbx6Kw
+
+{
+    "sender": "user1",
+    "receiver": "user3",
+    "content": "Pesan masuk"
+}
+
+
+###
+GET http://localhost:8080/messages HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwiZXhwIjoxNzM3NzczMjk2fQ.oDDhPGDvO2a-iDi03IU1v3kBA7ORjulzg4zD0ND32c0
+
+
+###
+GET http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwiZXhwIjoxNzM3NzczMjk2fQ.oDDhPGDvO2a-iDi03IU1v3kBA7ORjulzg4zD0ND32c0
